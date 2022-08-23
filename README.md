@@ -10,6 +10,14 @@ Furthermore, you also need to have [Apache Tomcat](https://tomcat.apache.org/dow
 >Windows - Preference - Server - Runtime Environment - Add - Apache Tomcat v8.0 or
 Eclipse- Preferences - Server - Runtime Environments - Add - Apache Tomcat v8.0
 
+You also need to set up the server credentials in your project so that they match your MySQL credentials. In the Java project, open the following file: `loginPage\src\com\loginPage\pkg\ApplicationDB.java`. Scroll down until you see the following lines:
+
+```Java
+//Create a connection to your DB
+connection = DriverManager.getConnection(connectionUrl,"root", "root");
+```
+Here, you have to replace "root" and "root" with your username and password from MySQL.
+
 Finally, to actually run the website, do the following steps:
 
 >Right click on the project - Run as - Run on Server - Apache – Tomcat8
